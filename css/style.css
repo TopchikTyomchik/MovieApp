@@ -113,9 +113,16 @@ body {
 }
 .header__input {
   font-size: 16px;
-  padding: 5px 0px;
-  border-radius: 5px;
+  padding: 5px 5px;
+  border: 1px solid rgb(243, 222, 117);
+  border-radius: 10px;
   width: 500px;
+  background: transparent;
+  color: rgb(22, 125, 215);
+}
+
+input[name="search"]::placeholder {
+  color: rgb(255, 255, 255);
 }
 
 
