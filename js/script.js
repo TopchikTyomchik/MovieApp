@@ -111,33 +111,33 @@ async function openModal(id) {
 
    modalElem.innerHTML = `
       <div class="modal_window__body">
-                  <div class="modal-window__top">
-                     <div class="modal-window__row">
-                        <div class="modal-window__column modal-window__column_image">
-                           <div class="modal__window__image">
-                           <img src="${respDataID.posterUrl}" alt="${respDataID.nameRu}">
-                           </div>
-                        </div>
-                        <div class="modal-window__column modal-window__column_info">
-                        <p class="modal-window__name"><span class="name-word">Название:</span><span class="year-number">${respDataID.nameRu}</span></p>
-                        <p class="modal-window__year"><span class="year-word">Год:</span><span class="year-number">${respDataID.year}</span></p>
-                        <p class="modal-window__country"><span class="country-word">Страна:</span><span class="country-name">${respDataID.countries.map(elem => ` ${elem.country}`)}</span></p>
-                        <p class="modal-window__genre"><span class="genre-word">Жанр:</span><span class="country-name">${respDataID.genres.map(elem => ` ${elem.genre}`)}</span></p>
-                        <p class="modal-window__length"><span class="length-word">Прододжительность:</span><span class="country-name">${respDataID.filmLength ? respDataID.filmLength : "-"}</span></p>
-                        </div>
-                     </div>
+         <div class="modal-window__top">
+            <div class="modal-window__row">
+               <div class="modal-window__column modal-window__column_image">
+                  <div class="modal__window__image">
+                  <img src="${respDataID.posterUrl}" alt="${respDataID.nameRu}">
                   </div>
-                  <div class="modal-window__bottom">
-                     <p class="modal-window__url"><span class="url-word">Сайт: </span><a href="${respDataID.webUrl}" class="url-modal" target="_blank">${respDataID.webUrl}</a></p>
-                     <p class="modal-window__description">
-                        ${respDataID.description}</br>
-                        ${respDataID.shortDescription ?  respDataID.shortDescription : ""} 
-                     </p>
-                  </div>
-                  <section class="button">
-                     <button class="btn">Закрыть</button>
-                  </section>
-                  </div>
+               </div>
+               <div class="modal-window__column modal-window__column_info">
+               <p class="modal-window__name"><span class="name-word">Название:</span><span class="year-number">${respDataID.nameRu}</span></p>
+               <p class="modal-window__year"><span class="year-word">Год:</span><span class="year-number">${respDataID.year}</span></p>
+               <p class="modal-window__country"><span class="country-word">Страна:</span><span class="country-name">${respDataID.countries.map(elem => ` ${elem.country}`)}</span></p>
+               <p class="modal-window__genre"><span class="genre-word">Жанр:</span><span class="country-name">${respDataID.genres.map(elem => ` ${elem.genre}`)}</span></p>
+               <p class="modal-window__length"><span class="length-word">Продоkжительность:</span><span class="country-name">${respDataID.filmLength ? respDataID.filmLength : "-"}</span></p>
+               </div>
+            </div>
+         </div>
+         <div class="modal-window__bottom">
+            <p class="modal-window__url"><span class="url-word">Сайт: </span><a href="${respDataID.webUrl}" class="url-modal" target="_blank">${respDataID.webUrl}</a></p>
+            <p class="modal-window__description">
+               ${respDataID.description}</br>
+               ${respDataID.shortDescription ?  respDataID.shortDescription : ""} 
+            </p>
+         </div>
+         <section class="button">
+            <button class="btn">Закрыть</button>
+         </section>
+         </div>
    `;
    const modalBtn = document.querySelector('.button .btn');
    modalBtn.addEventListener('click', closeModal);
