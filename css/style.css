@@ -270,6 +270,43 @@ input[name="search"]::placeholder {
   border: 2px solid rgb(228, 190, 0);
 }
 
+@media  (min-width:2200px){
+  [class*=__container] {
+    max-width: 80%;
+   
+  }
+  .main {
+    padding: 200px 0px 0px 0px;
+  }
+  .header__logo {
+    font-size: 50px;
+  }
+
+  .header__input {
+    font-size: 50px;
+    width: 1000px;
+  }
+}
+
+@media  (min-width:5000px){
+  .main {
+    padding: 600px 0px 0px 0px;
+  }
+
+  .movie-card, .movie-card__genre p{
+    font-size: 120px;
+  }
+
+  .header__logo {
+    font-size: 200px;
+  }
+
+  .header__input {
+    font-size: 150px;
+    width: 2000px;
+  }
+}
+
 /*------------------------------------- Modal -----------------------------*/
 
 .modal-window {
