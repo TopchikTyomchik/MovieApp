@@ -123,14 +123,14 @@ async function openModal(id) {
                <p class="modal-window__year"><span class="year-word">Год:</span><span class="year-number">${respDataID.year}</span></p>
                <p class="modal-window__country"><span class="country-word">Страна:</span><span class="country-name">${respDataID.countries.map(elem => ` ${elem.country}`)}</span></p>
                <p class="modal-window__genre"><span class="genre-word">Жанр:</span><span class="country-name">${respDataID.genres.map(elem => ` ${elem.genre}`)}</span></p>
-               <p class="modal-window__length"><span class="length-word">Продоkжительность:</span><span class="country-name">${respDataID.filmLength ? respDataID.filmLength : "-"}</span></p>
+               <p class="modal-window__length"><span class="length-word">Продолжительность:</span><span class="country-name">${respDataID.filmLength ? respDataID.filmLength : "-"}</span></p>
                </div>
             </div>
          </div>
          <div class="modal-window__bottom">
             <p class="modal-window__url"><span class="url-word">Сайт: </span><a href="${respDataID.webUrl}" class="url-modal" target="_blank">${respDataID.webUrl}</a></p>
             <p class="modal-window__description">
-               ${respDataID.description}</br>
+               ${respDataID.description}</br></br>
                ${respDataID.shortDescription ?  respDataID.shortDescription : ""} 
             </p>
          </div>
