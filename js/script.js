@@ -89,7 +89,6 @@ moviesRowElem.addEventListener('click', (event) => {
    event.preventDefault()
    const id = event.target.closest('.movie-card').querySelector('.movie-card__id').innerHTML;
    
-   
    if (event.target.closest('.movie-card')) {
       openModal(id)
    }
