@@ -29,7 +29,7 @@ function displayMovies(data) {
       moviesRowElem.insertAdjacentHTML(
          'beforeend',
          `<div class="movies__column">
-         <div  class="movies__card movie-card">
+         <a href="" class="movies__card movie-card">
            <div class="movie-card__image">
              <img src="${movie.posterUrl}" alt="${movie.nameRu}">
            </div>
@@ -39,7 +39,7 @@ function displayMovies(data) {
              <div class="movie-card__avarage movie-card__avarage_${getRatingColor(getRating(movie.rating))}">${getRating(movie.rating)}</div>
              <span class="movie-card__id">${movie.filmId}</span>
            </div>
-         </div>
+         </a>
        </div>`
       );
       
@@ -86,6 +86,7 @@ formElem.addEventListener('submit', event => {
 // Modal
 
 moviesRowElem.addEventListener('click', (event) => {
+   event.preventDefault()
    const id = event.target.closest('.movie-card').querySelector('.movie-card__id').innerHTML;
    
    
