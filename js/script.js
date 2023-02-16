@@ -1,5 +1,5 @@
 const API_KEY = '250a9f41-dc4f-4c61-b014-216dffe658bd';
-const API_URL_TOP100 = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1';
+const API_URL_TOP250 = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1';
 const API_URL_KEYWORD = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=';
 const API_URL_ID = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/';
 const moviesRowElem = document.querySelector('.movies__row');
@@ -7,8 +7,7 @@ const formElem = document.querySelector('.header__form');
 const inputElem = document.querySelector('.header__input');
 const modalElem = document.querySelector('.modal-window');
 
-
-getMovies(API_URL_TOP100);
+getMovies(API_URL_TOP250);
 
 async function getMovies(url) {
    const resp = await fetch(url, {
@@ -75,7 +74,7 @@ formElem.addEventListener('submit', event => {
    const apiSearchUrl = API_URL_KEYWORD + inputElem.value;
 
    if (inputElem.value == "") {
-      getMovies(API_URL_TOP100);
+      getMovies(API_URL_TOP250);
    } else {
       getMovies(apiSearchUrl);
    }
