@@ -1,5 +1,5 @@
 const API_KEY = '250a9f41-dc4f-4c61-b014-216dffe658bd';
-const API_URL_TOP100 = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1';
+const API_URL_TOP100 = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1';
 const API_URL_KEYWORD = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=';
 const API_URL_ID = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/';
 const moviesRowElem = document.querySelector('.movies__row');
